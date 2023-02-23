@@ -73,6 +73,13 @@ A: [ACCEPTABLE/NOT ACCEPTABLE]
 
 
 # Audit scope
+
+
+[surge-protocol-v1 @ b7cb1dc2a2dcb4bf22c765a4222d7520843187c6](https://github.com/Surge-fi/surge-protocol-v1/tree/b7cb1dc2a2dcb4bf22c765a4222d7520843187c6)
+- [surge-protocol-v1/src/Factory.sol](surge-protocol-v1/src/Factory.sol)
+- [surge-protocol-v1/src/Pool.sol](surge-protocol-v1/src/Pool.sol)
+
+
 [List of all contracts in scope]
 
 # About [project name]
