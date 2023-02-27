@@ -1,5 +1,7 @@
 
-# [project name] contest details
+# Surge contest details
+
+Borrow, lend, long or short any token on any chain.
 
 - Join [Sherlock Discord](https://discord.gg/MABEWyASkp)
 - Submit findings using the issue page in your private contest repo (label issues as med or high)
@@ -7,8 +9,7 @@
 
 # Resources
 
-- [[resource1]](url)
-- [[resource2]](url)
+- [Surge Protocol Overview]([url](https://medium.com/surge-fi/introduction-to-surge-protocol-overview-34cc828d7c50))
 
 # On-chain context
 
@@ -29,14 +30,14 @@ If you **don't** want to receive issues about this Admin being able to steal fun
 If you want to receive issues about this admin being able to steal or result in loss of funds, label as RESTRICTED.*
  
 ```
-DEPLOYMENT: [e.g. mainnet, Arbitrum, Optimism, ..]
-ERC20: [e.g. any, none, USDC, USDC and USDT]
-ERC721: [e.g. any, none, UNI-V3]
-ERC777: [e.g. any, none, {token name}]
-FEE-ON-TRANSFER: [e.g. any, none, {token name}]
-REBASING TOKENS: [e.g. any, none, {token name}]
-ADMIN: [trusted, restricted, n/a]
-EXTERNAL-ADMINS: [trusted, restricted, n/a]
+DEPLOYMENT: Mainnet, Optimism, Arbitrum, Fantom, Avalanche, Polygon, BNB Chain and other EVM chains
+ERC20: any non-rebasing
+ERC721: none
+ERC777: none
+FEE-ON-TRANSFER: none
+REBASING TOKENS: none
+ADMIN: restricted
+EXTERNAL-ADMINS: restricted
 ```
 
 
@@ -47,29 +48,29 @@ Please answer the following questions to provide more context:
 3) Outcomes that are expected from those roles 
 4) Specific actions/outcomes NOT intended to be possible for those roles
 
-A: 
+A: There is a single fee operator role. It can only set the fee on interest (up to 20% fee) and the fee recipient address. Unexpected loss of funds due to the operator role should be considered high severity bugs.
 
 ___
 ### Q: Is the code/contract expected to comply with any EIPs? Are there specific assumptions around adhering to those EIPs that Watsons should be aware of?
-A:
+A: Pool contracts (aka receipt tokens) should be compliant with the ERC20 token standard.
 
 ___
 
 ### Q: Please list any known issues/acceptable risks that should not result in a valid finding.
-A: 
+A: Loan and collateral contracts are considered by the Pool contracts as trusted, ERC20-compliant and non-rebasing token contracts. It's the users' responsibility to choose pools with valid non-malicious token contracts. This include re-entrancy risk due to external calls to these 2 contracts.
 
 ____
 ### Q: Please provide links to previous audits (if any).
-A:
+A: None available
 
 ___
 
 ### Q: Are there any off-chain mechanisms or off-chain procedures for the protocol (keeper bots, input validation expectations, etc)? 
-A: 
+A: No.
 _____
 
 ### Q: In case of external protocol integrations, are the risks of an external protocol pausing or executing an emergency withdrawal acceptable? If not, Watsons will submit issues related to these situations that can harm your protocol's functionality. 
-A: [ACCEPTABLE/NOT ACCEPTABLE] 
+A: NOT ACCEPTABLE
 
 
 # Audit scope
@@ -82,4 +83,6 @@ A: [ACCEPTABLE/NOT ACCEPTABLE]
 
 [List of all contracts in scope]
 
-# About [project name]
+# About Surge
+
+Surge is a hyperstructure lending protocol that allows anyone to deployer their own lending pool. It utilizes a novel mechanism called Algorithmic Collateral Ratios in order to eliminate the need for price oracles in DeFi lending.
