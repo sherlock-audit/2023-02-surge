@@ -36,7 +36,7 @@ ERC721: none
 ERC777: none
 FEE-ON-TRANSFER: none
 REBASING TOKENS: none
-ADMIN: restricted
+ADMIN: restricted. Fee operator should not set fee higher than 20% or cause unexpected loss of user funds
 EXTERNAL-ADMINS: restricted
 ```
 
