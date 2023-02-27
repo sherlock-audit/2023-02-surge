@@ -9,7 +9,7 @@ Borrow, lend, long or short any token on any chain.
 
 # Resources
 
-- [Surge Protocol Overview]([url](https://medium.com/surge-fi/introduction-to-surge-protocol-overview-34cc828d7c50))
+- [Surge Protocol Overview](https://medium.com/surge-fi/introduction-to-surge-protocol-overview-34cc828d7c50)
 
 # On-chain context
 
